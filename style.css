@@ -1,0 +1,712 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: fira sans;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    background-color: #0D0D2B;
+    padding: 0rem 11rem;
+    position: relative;
+}
+.container .navbar{
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+
+}
+.container .nav-logo{
+    margin-right: auto;
+}
+.container .nav-links{
+    display: flex;
+    align-items: center;
+}
+.container .nav-links a{
+    text-decoration: none;
+    margin-right: 2rem;
+    color: white;
+    text-transform: capitalize;
+    display: block;
+}
+.container .nav-links a:last-child{
+    margin-right: 0rem;
+}
+.container .nav-links a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #3B82F6;
+    margin: auto;
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.container .nav-links a:hover::after{
+    width: 100%;
+}
+.nav-links .login{
+    border-right: 1px solid grey;
+    padding-right: 1.5rem;
+}
+.nav-links .register{
+    background-color: #3B82F6;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    color: black;
+}
+
+.container .main{
+    display: flex;
+    align-items: center;
+    padding: 3rem 0rem;
+}
+.hidden-menu{
+    height: 100vh;
+    padding-top: 1rem;
+    background-color: #0D0D2B;
+    display: none;
+    position: absolute;
+    z-index: 11111;
+    width: 100%;
+    animation: myAnim 1s ease 0s 1 normal forwards;    
+}
+@keyframes myAnim {
+	0% {
+		opacity: 1;
+		transform: translateY(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fa-xmark{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.hidden-menu .nav-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+}
+.hidden-menu .nav-links{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    line-height: 4rem;
+}
+.nav-links .div-reg{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.sub-main img{
+    width: 30rem;
+}
+.container .main-content{
+    margin-right: 8rem;
+    color: white;
+}
+.main-content h1{
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+.main-content h4{
+    background-color: rgba(255, 255, 255, 0.301);
+    padding: 0.3rem 0.5rem;
+    color: white;
+    width: 62%;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+.main-content span{
+    background-color: white;
+    padding: 0.4rem 0.6rem;
+    border-radius: 20px;
+    color: grey;
+    font-size: 15px;
+    margin-right: 2rem;
+    font-weight: 200;
+    
+}
+.main-content p{
+    width: 80%;
+    font-size: 13px;
+    font-weight: 200;
+}
+.main-content .btn{
+    background-color: #3B82F6;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    cursor: pointer;
+
+}
+.btn i{
+    padding: 0.5rem;
+    border-radius: 50px;
+    color: #3B82F6;
+    background-color: white;
+    margin-left: 1rem;
+    font-size: 7px;
+    
+}
+.container .main-stat{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5rem;
+}
+.main-stat .stat-one{
+    display: flex;
+    align-items: center;
+}
+.stat-one i{
+    background-color: rgba(128, 128, 128, 0.438);
+    padding: 15px;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    color: #3B82F6;
+    font-size: 20px;
+}
+.main-stat .stat-flex{
+    line-height: 0.5rem;
+    color: white;
+}
+.stat-flex p{
+    text-transform: capitalize;
+    font-weight: 200;
+}
+.container .main-two{
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+}
+.main-two img{
+    width: 35rem;
+    margin-right: 3rem;
+}
+.main-two-stat{
+    color: white;
+}
+.main-two-stat p{
+    font-weight: 200;
+}
+.main-two-stat h1{
+    font-size: 40px;
+}
+.main-two-stat .btn-lm{
+    background-color: #3B82F6;
+    padding: 8px 16px;
+    border-radius: 15px;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    font-size: 16px;
+}
+.container .main-adj{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 12rem;
+}
+.main-adj h1{
+    text-transform: capitalize;
+}
+.main-adj p{
+    font-weight: 200;
+}
+.main-tab{
+    height: 60vh;
+    background-color: white;
+    width: 100%;
+    margin-top: 12rem;
+    text-align: center;
+}
+.main-box .main-section{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.main-section input{
+    width: 50%;
+    height: 2rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+.main-section select{
+    width: 19%;
+    height: 2rem;
+    border-radius: 0%;
+    border: none;
+    font-size: 18px;
+}
+input::placeholder{
+    font-size: 20px;
+    color: black;
+    background: transparent;
+
+}
+.container .main-box{
+    background-color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: -10rem;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    margin-left: 6rem;
+    gap: 2rem;
+    width: 56%;
+}
+.main-section .btn-calc{
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+    font-size: 18px;
+    margin-left: 2rem;
+    background-color: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.main-details span{
+    color: #3B82F6;
+}
+.main-details p{
+    font-weight: 500;
+}
+.main-details h3{
+    color: #3B82F6;
+    text-transform: uppercase;
+}
+.main-tab .main-trade{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.main-trade .trade-one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 17rem;
+    height: 22rem;
+    text-align: center;
+    box-shadow: 1px 1px 10px 0px rgba(128, 128, 128, 0.512);
+    padding: 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    }
+    .main-trade .trade-one:hover .fa-circle-arrow-right{
+        background-color: #3B82F6;
+        color: white;
+        width: 20%;
+    }
+    .main-trade .trade-one:hover span{
+        color: black;
+    }
+    .main-trade .trade-one:hover{
+        background-color: #3B82F6;
+        color: white;
+    }
+.trade-one h2{
+    text-transform: uppercase;
+}
+.trade-one span{
+    color: grey;
+    margin-left: 0.5rem;
+    font-size: 15px;
+}
+.trade-one p{
+    font-weight: 300;
+}
+.fa-circle-arrow-right{
+    border-radius: 50%;
+    margin-top: 2rem;
+    font-size: 45px;
+    cursor: pointer;
+    padding: 16px;
+    border: 1px solid rgb(128, 128, 128);
+    color: #3B82F6;
+}
+.main-vest{
+    padding: 0rem 11rem;
+    background-color: #0D0D2B;
+    margin-top: 13rem;
+    
+}
+.main-invest .invest-one{
+    display: flex;
+    align-items: center;
+    padding: 5rem 0rem;
+    gap: 2rem;
+}
+.main-invest .invest-one:nth-child(3){
+    flex-direction: row-reverse;
+}
+.main-invest .invest-one:nth-child(2){
+    align-items: flex-start;
+}
+.invest-one .invest-details{
+    text-align: left;
+    color: white;
+}
+.invest-details h3{
+    text-transform: capitalize;
+    font-size: 23px;
+}
+.invest-details p{
+    font-weight: 200;
+    color: rgba(226, 217, 217, 0.732);
+    
+}
+.main-invest h1{
+    color: white;
+    padding-top: 4rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.invest-details .btn-lm{
+    background-color: #3B82F6;
+    padding: 8px 16px;
+    border-radius: 15px;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    font-size: 16px;
+}
+.invest-one .invest-details:nth-child(1){
+    margin-left: 2rem;
+}
+.main-vest .main-mining{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30vh;
+    background-image: url(./images/newsletter-box.png);
+    background-position: center;
+    border-radius: 20px;
+    margin-left: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.main-mining .mining{
+    margin-right: 5rem;
+    color: white;
+}
+.main-mining .mining p{
+    font-weight: 200;
+    line-height: 5px;
+}
+.main-mining .mining h2{
+    text-transform: capitalize;
+}
+.main-mining input{
+    width: 30%;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    margin-right: 2rem;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    outline: none;
+}
+.main-mining input::placeholder{
+    color: white;
+    font-size: 16px;
+}
+.main-mining .btn-sub{
+    padding: 0.6rem 1rem;
+    text-transform: capitalize;
+    font-size: 18px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+
+}
+.footer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: white;
+    text-transform: capitalize;
+    line-height: 2rem;
+
+}
+.footer-links li{
+    list-style: none;
+    
+}
+.footer-link ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -2.5rem;
+}
+.footer-link ul li{
+    text-align: left;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.footer-link h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer img{
+    margin-top: 1rem;
+}
+.footer-socials{
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+.footer-cop h3{
+    font-size: 16px;
+    font-weight: normal;
+}
+.footer-socials .socials li{
+  margin-right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  list-style: none;
+  display: inline;
+}
+.fa-bars{
+    display: none;
+}
+.invest-two img{
+    width: 100%;
+}
+@media (max-width: 420px){
+    html, body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+    }
+    .container{
+        padding: 0rem 2rem;
+    }
+    .container .nav-links{
+        display: none;
+    }
+    .hidden-menu .nav-links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2rem;
+    }
+    .hidden-menu .nav-links a{
+        margin-right: 0rem;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: white;
+    }
+    .hidden-menu .nav-links a:hover{
+        color: #3B82F6;
+    }
+    .fa-bars{
+        display: block;
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    .sub-main img{
+        width: 22rem;
+        margin-top: 2rem;
+    }
+    .container .main{
+        flex-direction: column;
+    }
+    .main-content h4{
+        width: 148%;
+    }
+    .main-content h1, .main-content p{
+        width: 160%;
+    }
+    .container .main-stat{
+        flex-direction: column;
+    }
+    .container .main-two{
+        flex-direction: column;
+    }
+    .main-two img{
+        width: 22rem;
+        margin-right: 0rem;
+        margin-bottom: 2rem;
+    }
+    .container .main-adj{
+        flex-direction: column;
+    }
+    .main-tab .main-trade{
+        flex-direction: column;
+
+    }
+    .container .main-box{ 
+        width: 234px;
+        left: -68px;
+        flex-direction: column;
+    }
+    .main-box .main-section{
+        flex-direction: column;
+    }
+    .main-section select, .main-section input{
+        width: 100%;
+    }
+    .main-tab{
+        margin-top: 24rem;
+    }
+    .main-trade .trade-one{
+        width: 275px;
+    }
+    .main-vest{
+        margin-top: 75rem;
+        padding: 0rem;
+    }
+    .main-tab h1{
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+    }
+    .main-invest .invest-one{
+        flex-direction: column;
+        padding: 3rem 0rem;
+    }
+    .main-invest .invest-one:nth-child(3) {
+        flex-direction: column;
+    }
+    .invest-two img{
+        margin-right: -0.5rem;
+    }
+    .main-invest .invest-one:nth-child(2){
+        align-items: center;
+    }
+    .main-vest .main-mining{
+        flex-direction: column;
+        width: 92%;
+        height: 33vh;
+        margin-left: 1rem;
+    }
+    .main-mining .mining{
+        margin-right: 0rem;
+        margin-left: 0rem;
+        margin-bottom: 1rem;
+    }
+    .main-mining .btn-sub{
+        margin-top: 1rem;
+    }
+    .main-mining input{
+        width: 80%;
+        margin-left: 2rem;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-socials{
+        flex-direction: column;
+    }
+    .div-reg .register{
+        background: none;
+    }
+
+}
+
+@media (max-width: 900px){
+    .container{
+        padding: 0rem 2rem;
+    }
+    .sub-main img{
+        width: 20rem;
+    }
+    .main-content h4{
+        width: 100%;
+    }
+    .stat-flex p{
+        line-height: 1.1rem;
+    }
+    .container .main-two{
+        flex-direction: column-reverse;
+    }
+    .main-tab .main-trade{
+        gap: 2rem;
+        flex-direction: column;
+    }
+    .main-trade .trade-one{
+        margin-bottom: 2rem;
+        width: 18rem;
+    }
+    .main-vest{
+        padding: 0rem 2rem;
+    }
+    .invest-two img{
+        
+    }
+    .main-vest .main-mining{
+        margin-left: 0rem;
+        padding: 0.5rem;
+    }
+    .footer{
+        gap: 2rem;
+        font-size: 0.9rem;
+    }
+    .footer-link ul{
+        gap: 0.5rem;
+    }
+    .container .main-box{
+       width: 59%;
+    }
+    .main-two-stat{
+        text-align: center;
+    }
+    .main-mining .mining p{
+        font-size: 0.8rem;
+    }
+    .main-tab{
+        margin-bottom: 83rem;
+    }
+}
